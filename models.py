@@ -5,3 +5,7 @@ class Posts(models.Model):
 	post_content = models.TextField()
 	published_date = models.DateTimeField(auto_now=True)
 	# add in author and categories at a later stage
+	
+	def __str__(self):
+		return self.title
+		

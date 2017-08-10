@@ -1,0 +1,14 @@
+<html>
+{% if latest_post_list %}
+	<ul>
+		{% for post in latest_post_list %}
+			<li>
+			<a href="/pyblog/{{ post.id }}/"><b>{{ post.title }}</b></a><br />
+			Published on: {{ post.published_date }}<br /><br />
+			</li>
+		{% endfor %}
+	</ul>
+{% else %}
+	<p>No posts are available.</p>
+{% endif %}
+</html>
